@@ -4,7 +4,7 @@ terraform {
     bucket         = "francky-bucket-test"
     key            = "test/terraform.tfstate"
     region         = "eu-west-1"
-    profile        = "ithinkupc-test" # AWS profile to use
+    profile        = "" # AWS profile to use
     dynamodb_table = "captura-terraform-locks"
     encrypt        = true
   }
