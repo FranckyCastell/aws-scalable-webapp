@@ -1,7 +1,6 @@
-
 module "waf_alb" {
   source = "dasmeta/modules/aws//modules/waf/"
-  name   = "test"
+  name   = "${var.project}-waf_alb-${var.environment}"
   alarms = {
     enabled       = false
     alarm_actions = []
@@ -73,9 +72,12 @@ module "waf_alb" {
   ]
 
   create_alb_association = true
-  alb_arn_list           = ["arn:aws:elasticloadbalancing:us-east-1:*:loadbalancer/"] # Replace with your actual ALB ARN
+  alb_arn_list           = [module.alb.arn]
 
   visibility_config = {
-    metric_name = "test-waf"
+    cloudwatch_metrics_enabled = true
+    metric_name                = "${var.project}-waf_metric-${var.environment}"
+    sampled_requests_enabled   = true
   }
+
 }

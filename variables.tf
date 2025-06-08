@@ -30,10 +30,6 @@ variable "bucket_name" {
 # S3 VARIABLES
 
 # NETWORKING VARIABLES
-variable "vpc_name" {
-  description = "The name of the VPC to create"
-  type        = string
-}
 variable "cidr" {
   description = "The CIDR block for the VPC"
   type        = string
@@ -51,13 +47,6 @@ variable "private_subnets_cidr" {
   type        = list(string)
 }
 # NETWORKING VARIABLES
-
-# ALB VARIABLES
-variable "alb_name" {
-  description = "The name of the Application Load Balancer"
-  type        = string
-}
-# ALB VARIABLES
 
 # SECURITY GROUP VARIABLES
 variable "sg_name" {
