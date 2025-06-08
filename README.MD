@@ -12,8 +12,6 @@ Este proyecto despliega una aplicación web altamente disponible, escalable y se
 6.  [Despliegue](#6-despliegue)
 7.  [Mantenimiento y Operaciones](#7-mantenimiento-y-operaciones)
 8.  [Seguridad](#8-seguridad)
-9.  [Consideraciones Adicionales](#9-consideraciones-adicionales)
-10. [Contacto](#10-contacto)
 
 ---
 
